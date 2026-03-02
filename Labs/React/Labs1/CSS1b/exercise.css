@@ -1,0 +1,24 @@
+/*
+
+💪 Exercise: Use CSS media queries to create a responsive layout
+
+Before you attempt the exercise, experiment with the CSS rule for the "main" tag below.
+
+Change the value of "flex-direction" to "column" instead of "row" - notice that the page changes from using a horizontal layout to a vertical layout, suitable for smaller screens such as those found on mobile devices.
+
+🎯 Your task:
+- Make this page responsive.
+  - On smaller screens (up to 500px wide), a vertical layout should be displayed.
+  - On larger screens, a horizontal layout should be displayed.
+
+💡 Tip:
+- Use the example as a reference if you can't remember how to write a media query for screen size.
+  https://stackblitz.com/edit/css-example-media-queries?file=styles.css
+  
+*/
+
+@media screen and (max-width: 450px) {
+  main {
+    flex-direction: column;
+  }
+}

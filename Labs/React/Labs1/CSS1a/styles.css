@@ -1,0 +1,13 @@
+body {
+  font-family: sans-serif;
+
+  /* default styles */
+  background-color: lavender;
+}
+
+/* styles applied on smaller screens */
+@media screen and (max-width: 450px) {
+  body {
+    background-color: moccasin;
+  }
+}

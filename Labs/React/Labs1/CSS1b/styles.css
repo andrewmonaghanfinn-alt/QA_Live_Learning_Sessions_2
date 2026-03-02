@@ -1,0 +1,66 @@
+/* To complete the exercise, open exercise.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+body {
+  font-family:
+    "Playfair Display",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  margin: 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  padding: 1rem 1.5rem;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+main img {
+  border-radius: 3px;
+}
+
+main h1 {
+  margin-bottom: 0.5rem;
+}
+
+main p {
+  max-width: 245px;
+  margin: 0 0 1rem;
+}
+
+main button {
+  cursor: pointer;
+  font-family: inherit;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+main button:hover {
+  background-color: #252525;
+}
