@@ -31,7 +31,9 @@ export default function App() {
     <main>
       <h1>📈 Powers of two</h1>
       <h2>{count.toLocaleString()}</h2>
-      <button onClick={double}>x2</button>
+      <button onClick={() => { setCount((prev) => prev*2)}}>x2</button>
     </main>
   );
 }
+
+
