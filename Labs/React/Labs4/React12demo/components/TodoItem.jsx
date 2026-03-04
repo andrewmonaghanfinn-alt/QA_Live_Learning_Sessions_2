@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { TodoContext } from "../App";
+import { TodoContext } from "../context/todo-context";
 
 export default function TodoItem({ todo }) {
   const { toggleTodo } = useContext(TodoContext);

@@ -1,41 +1,15 @@
-import React, { useState, createContext } from "react";
-import TodoList from "./components/TodoList";
-import "./style.css";
+import React, { useContext } from "react";
+import TodoItem from "./TodoItem";
+import { TodoContext } from "../App";
 
-export const TodoContext = createContext();
-
-export default function App() {
-  function TodoProvider({ children }) {
-    const [todos, setTodos] = useState([
-      { id: 1, title: "Learn React useState", isComplete: true },
-      { id: 2, title: "Learn React useEffect", isComplete: true },
-      { id: 3, title: "Learn React useContext", isComplete: false },
-    ]);
-
-    function toggleTodo(id) {
-      setTodos((prev) =>
-        prev.map((todo) => ({
-          ...todo,
-          isComplete: todo.id === id ? !todo.isComplete : todo.isComplete,
-        })),
-      );
-    }
-
-    const contextValue = { todos, toggleTodo };
-
-    return (
-      <TodoContext.Provider value={contextValue}>
-        {children}
-      </TodoContext.Provider>
-    );
-  }
+export default function TodoList() {
+  const { todos } = useContext(TodoContext);
 
   return (
-    <main>
-      <h1>☑️ Todo List</h1>
-      <TodoProvider>
-        <TodoList />
-      </TodoProvider>
-    </main>
+    <ul>
+      {todos.map((todo) => (
+        <TodoItem key={todo.id} todo={todo} />
+      ))}
+    </ul>
   );
 }
